@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Area of circle</title>
+	<script>
+		function checkVowel(letter) {
+			letter = document.getElementById("str1").value;
+			letter = letter.toLowerCase();
+			var vowel = ["a", "e", "i", "o", "u"];
+			var consonent = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
+			for (var i=0; i < vowel.length; i++) {
+				if (letter == vowel[i]) {
+					document.getElementById("paragraph").innerHTML = "it is a vowel";
+					return;
+				}	
+			}
+			for (var i=0; i < consonent.length; i++) {
+				if (letter == consonent[i]) {
+					document.getElementById("paragraph").innerHTML = "it is a consonent";
+					return;
+				}	
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Check entered letter is Vovel or Consonant</h1>
+	<input type='text' name='str1' id='str1' placeholder='Please enter an alphabet to check' onchange=Area(this)>
+	<button type='submit' onclick='checkVowel(this)' id='submit' name='submit'>Submit</button>
+	<div id='div1'>
+		<p id='paragraph'></p>
+	</div>
+</body>
+</html>
